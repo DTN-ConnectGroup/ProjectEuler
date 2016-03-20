@@ -16,11 +16,10 @@ namespace ProjectEuler
 			var sw = new Stopwatch();
 			sw.Start();
 
-			for (double i = 0; i < Math.Sqrt(ourNum); i++)
+			for (double i = 5; i < Math.Sqrt(ourNum); i+=2)
 			{
 				if (isPrime(i))
 				{
-					Console.WriteLine(i);
 					while (ourNum % i == 0)
 					{
 						ourNum /= i;
