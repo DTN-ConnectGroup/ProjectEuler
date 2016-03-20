@@ -29,7 +29,7 @@ namespace ProjectEuler
 			}
 
 			sw.Stop();
-			Console.WriteLine("Time elapsed: " + sw.Elapsed);
+			Console.WriteLine("Time elapsed: " + sw.ElapsedMilliseconds);
 			Console.WriteLine("The solution is {0}", ourNum);
 			Console.ReadKey();
 		}
