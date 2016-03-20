@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,15 +13,14 @@ namespace ProjectEuler
 		{
 			Console.WriteLine("We're just starting out baby. Project Euler - 3");
 			double ourNum = 600851475143;
-			var primeList = new List<double>();
-			var factorList = new List<double>();
+			var sw = new Stopwatch();
+			sw.Start();
 
 			for (double i = 0; i < Math.Sqrt(ourNum); i++)
 			{
 				if (isPrime(i))
 				{
-					primeList.Add(i);
-					Console.WriteLine(i + " " + i * i + " " + ourNum);
+					Console.WriteLine(i);
 					while (ourNum % i == 0)
 					{
 						ourNum /= i;
@@ -28,7 +28,8 @@ namespace ProjectEuler
 				}
 			}
 
-
+			sw.Stop();
+			Console.WriteLine("Time elapsed: " + sw.Elapsed);
 			Console.WriteLine("The solution is {0}", ourNum);
 			Console.ReadKey();
 		}
