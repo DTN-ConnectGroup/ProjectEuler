@@ -14,7 +14,6 @@ namespace ProjectEuler
 			double ourNum = 600851475143;
 			var primeList = new List<double>();
 			var factorList = new List<double>();
-			double max = 0;
 
 			for (double i = 0; i < Math.Sqrt(ourNum); i++)
 			{
