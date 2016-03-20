@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ProjectEuler
+﻿namespace Project_Euler
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Problem3.Run();
+			Problem4.Run();
 
 		}
 	}

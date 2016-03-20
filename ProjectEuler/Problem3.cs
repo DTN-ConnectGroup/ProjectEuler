@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectEuler
+namespace Project_Euler
 {
 	static class Problem3
 	{
