@@ -11,11 +11,34 @@ namespace Project_Euler
 	{
 		public static void Run()
 		{
-			Console.WriteLine("Project Euler - 9: Special Pythagorean triplet");
-			var r = 1d;
+			Console.WriteLine("Project Euler - 10: Summation of primes");
+			ulong r = 2;
 			var sw = new Stopwatch();
 			sw.Start();
 
+
+			var primes = new List<ulong> { 2 };
+			bool isPrime = false;
+
+
+			for (ulong i = 2; i < 2000000; i++)
+			{
+				isPrime = true;
+				foreach (ulong p in primes)
+				{
+					if (i % p == 0)
+					{
+						isPrime = false;
+						break;
+					}
+				}
+
+				if (isPrime)
+				{
+					primes.Add(i);
+					r += i;
+				}
+			}
 
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
