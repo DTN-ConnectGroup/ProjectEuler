@@ -8,17 +8,17 @@ namespace Project_Euler
 		public static void Run()
 		{
 			Console.WriteLine("We're just starting out baby. Project Euler - 3");
-			double ourNum = 600851475143;
+			double r = 600851475143;
 			var sw = new Stopwatch();
 			sw.Start();
 
-			for (double i = 5; i < Math.Sqrt(ourNum); i += 2)
+			for (double i = 5; i < Math.Sqrt(r); i += 2)
 			{
 				if (isPrime(i))
 				{
-					while (ourNum % i == 0)
+					while (r % i == 0)
 					{
-						ourNum /= i;
+						r /= i;
 					}
 				}
 			}
