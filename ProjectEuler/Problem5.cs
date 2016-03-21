@@ -15,11 +15,11 @@ namespace Project_Euler
 			var numbers = new int[20];
 			for (int i = 0; i < 20; i++)
 				numbers[i] = i + 1;
-			
+
 
 			var resolved = false;
 
-			for (int i = 20; !resolved; i+= 20)
+			for (int i = 20; !resolved; i += 20)
 			{
 				resolved = true;
 				r = i;
@@ -30,8 +30,8 @@ namespace Project_Euler
 			}
 
 			sw.Stop();
-			Console.WriteLine("Time elapsed: " + sw.ElapsedMilliseconds);
-			Console.WriteLine("The solution is {0}", r);
+			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
+			Console.WriteLine("Result:		{0}", r);
 			Console.ReadKey();
 		}
 	}

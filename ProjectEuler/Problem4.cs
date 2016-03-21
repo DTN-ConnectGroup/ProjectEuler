@@ -10,7 +10,7 @@ namespace Project_Euler
 		public static void Run()
 		{
 			Console.WriteLine("Project Euler - 4");
-			var result = 0;
+			var r = 0;
 			var sw = new Stopwatch();
 			var u = 0;
 			sw.Start();
@@ -27,7 +27,7 @@ namespace Project_Euler
 					u = i * j;
 					if (IsPalindrome(u))
 					{
-						result = u > result ? u : result;
+						r = u > r ? u : r;
 					}
 
 				}
@@ -35,8 +35,8 @@ namespace Project_Euler
 
 
 			sw.Stop();
-			Console.WriteLine("Time elapsed: {0}ms", sw.ElapsedMilliseconds);
-			Console.WriteLine("Solution: {0}", result);
+			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
+			Console.WriteLine("Result:		{0}", r);
 			Console.ReadKey();
 		}
 

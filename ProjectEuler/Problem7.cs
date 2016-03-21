@@ -38,8 +38,8 @@ namespace Project_Euler
 
 			r = primes.Last();
 			sw.Stop();
-			Console.WriteLine("Time elapsed: " + sw.ElapsedMilliseconds);
-			Console.WriteLine("The solution is {0}", r);
+			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
+			Console.WriteLine("Result:		{0}", r);
 			Console.ReadKey();
 		}
 	}

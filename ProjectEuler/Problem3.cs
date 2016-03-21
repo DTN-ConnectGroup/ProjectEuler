@@ -12,7 +12,7 @@ namespace Project_Euler
 			var sw = new Stopwatch();
 			sw.Start();
 
-			for (double i = 5; i < Math.Sqrt(ourNum); i+=2)
+			for (double i = 5; i < Math.Sqrt(ourNum); i += 2)
 			{
 				if (isPrime(i))
 				{
@@ -24,8 +24,8 @@ namespace Project_Euler
 			}
 
 			sw.Stop();
-			Console.WriteLine("Time elapsed: " + sw.ElapsedMilliseconds);
-			Console.WriteLine("The solution is {0}", ourNum);
+			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
+			Console.WriteLine("Result:		{0}", r);
 			Console.ReadKey();
 		}
 
