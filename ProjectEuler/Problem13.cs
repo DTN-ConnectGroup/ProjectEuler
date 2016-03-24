@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project_Euler
 {
@@ -16,7 +14,7 @@ namespace Project_Euler
 			var sw = new Stopwatch();
 			sw.Start();
 
-			var bigBadString = @"37107287533902102798797998220837590246510135740250
+			var bigNumList = @"37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
 74324986199524741059474233309513058123726617309629
 91942213363574161572522430563301811072406154908250
@@ -117,26 +115,28 @@ namespace Project_Euler
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690";
 
-			var s = new string[100];
+			var actualList = new string[100];
 
 			for (int i = 0; i < 100; i++)
-				s[i] = bigBadString.Substring(i * 52, 50);
+				actualList[i] = bigNumList.Substring(i * 52, 50);
 
-
-			for (int j = 0; j < 5; j++)
+			var tempList = new List<double>();
+			for (int n = 0; n < 50; n++)
 			{
 				for (int i = 0; i < 100; i++)
 				{
-					var myString = s[i];
-					double temp = Convert.ToInt32(myString.Last().ToString());
-					r += temp * Math.Pow(10, j);
-
-					var tempLength = myString.Length;
-					var tempString = myString.Substring(0, tempLength - 1);
-					s[i] = tempString;
+					var s = actualList[i];
+					tempList.Add(Convert.ToDouble(s.Last().ToString()));
+					actualList[i] = s.Substring(0, s.Length - 1);
 				}
-			}
 
+				foreach (double d in tempList)
+					r += d;
+
+				tempList = new List<double>();
+
+				r /= 10;
+			}
 
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
