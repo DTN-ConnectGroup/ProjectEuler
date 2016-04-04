@@ -61,14 +61,22 @@
     <Compile Include="10-19 sans 18\Problem14.cs" />
     <Compile Include="10-19 sans 18\Problem15.cs" />
     <Compile Include="10-19 sans 18\Problem17.cs" />
+    <Compile Include="Problem22.cs" />
     <Compile Include="Problem18.cs" />
     <Compile Include="10-19 sans 18\Problem19.cs" />
+    <Compile Include="Problem20.cs" />
+    <Compile Include="Problem21.cs" />
+    <Compile Include="Problem23.cs" />
+    <Compile Include="Problem24.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reffed files\p022_names.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
