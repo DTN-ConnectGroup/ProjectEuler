@@ -70,6 +70,7 @@
     <Compile Include="Problem23.cs" />
     <Compile Include="Problem24.cs" />
     <Compile Include="Problem25.cs" />
+    <Compile Include="Problem67.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Reffed files\p022_names.txt" />
+    <Content Include="Reffed files\p067_triangle.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
