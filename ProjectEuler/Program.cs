@@ -4,7 +4,7 @@
 	{
 		static void Main(string[] args)
 		{
-			Problem67.Run();
+			Problem27.Run();
 		}
 	}
 }
