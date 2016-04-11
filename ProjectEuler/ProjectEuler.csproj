@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="10-19 sans 18\Problem13.cs" />
-    <Compile Include="10-19 sans 18\Problem12.cs" />
-    <Compile Include="10-19 sans 18\Problem10.cs" />
+    <Compile Include="10-19\Problem13.cs" />
+    <Compile Include="10-19\Problem12.cs" />
+    <Compile Include="10-19\Problem10.cs" />
     <Compile Include="03-09\Problem3.cs" />
     <Compile Include="03-09\Problem4.cs" />
     <Compile Include="03-09\Problem5.cs" />
@@ -58,13 +58,13 @@
     <Compile Include="03-09\Problem7.cs" />
     <Compile Include="03-09\Problem8.cs" />
     <Compile Include="03-09\Problem9.cs" />
-    <Compile Include="10-19 sans 18\Problem11.cs" />
-    <Compile Include="10-19 sans 18\Problem14.cs" />
-    <Compile Include="10-19 sans 18\Problem15.cs" />
-    <Compile Include="10-19 sans 18\Problem17.cs" />
+    <Compile Include="10-19\Problem11.cs" />
+    <Compile Include="10-19\Problem14.cs" />
+    <Compile Include="10-19\Problem15.cs" />
+    <Compile Include="10-19\Problem17.cs" />
     <Compile Include="Problem22.cs" />
-    <Compile Include="Problem18.cs" />
-    <Compile Include="10-19 sans 18\Problem19.cs" />
+    <Compile Include="10-19\Problem18.cs" />
+    <Compile Include="10-19\Problem19.cs" />
     <Compile Include="Problem20.cs" />
     <Compile Include="Problem21.cs" />
     <Compile Include="Problem23.cs" />
