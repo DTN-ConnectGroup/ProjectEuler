@@ -14,7 +14,7 @@ namespace Project_Euler
 
 			bool isFive = false;
 
-			for (int i = 1; !isFive; i++)
+			for(int i = 1; !isFive; i++)
 			{
 				r += i;
 				isFive = DivisorCount(r) > 500;
@@ -30,11 +30,9 @@ namespace Project_Euler
 		static int DivisorCount(double x)
 		{
 			var val = 0;
-			for (int i = 1; i * i <= x; i++)
-			{
-				if (x % i == 0)
+			for(int i = 1; i * i <= x; i++)
+				if(x % i == 0)
 					val += 2;
-			}
 			return val;
 		}
 	}

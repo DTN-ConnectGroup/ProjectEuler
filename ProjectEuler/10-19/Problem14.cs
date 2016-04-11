@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 
 namespace Project_Euler
 {
@@ -16,14 +14,14 @@ namespace Project_Euler
 
 			ulong t1 = 0;
 			ulong t2 = 0;
-			for (ulong i = 70; i < 1000000; i++)
+			for(ulong i = 70; i < 1000000; i++)
 			{
 				t1 = StoppingTime(i);
-				if (t1 > t2)
+				if(t1 > t2)
 				{
 					t2 = t1;
 					r = i;
-				}				
+				}
 			}
 
 
@@ -40,7 +38,7 @@ namespace Project_Euler
 			var n = number;
 			for(ulong i = 0; n != 1; i++)
 			{
-				if (n % 2 == 0)
+				if(n % 2 == 0)
 					n /= 2;
 				else
 					n = 3 * n + 1;

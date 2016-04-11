@@ -13,20 +13,17 @@ namespace Project_Euler
 			sw.Start();
 
 			var numbers = new int[20];
-			for (int i = 0; i < 20; i++)
+			for(int i = 0; i < 20; i++)
 				numbers[i] = i + 1;
-
 
 			var resolved = false;
 
-			for (int i = 20; !resolved; i += 20)
+			for(int i = 20; !resolved; i += 20)
 			{
 				resolved = true;
 				r = i;
-				foreach (int n in numbers)
-				{
+				foreach(int n in numbers)
 					resolved &= i % n == 0;
-				}
 			}
 
 			sw.Stop();

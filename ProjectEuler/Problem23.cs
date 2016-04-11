@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 
 
 namespace Project_Euler
@@ -42,7 +40,6 @@ namespace Project_Euler
 			for(double i = 1; i < x; i++)
 				if(IsAbundant(i) && IsAbundant(x - i))
 					return true;
-
 			return false;
 		}
 	}

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project_Euler
 {
@@ -40,7 +37,7 @@ namespace Project_Euler
 				if(ContainsTheNums)
 				{
 					counter++;
-					Console.WriteLine(i); 
+					Console.WriteLine(i);
 					r = i;
 				}
 

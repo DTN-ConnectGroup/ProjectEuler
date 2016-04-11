@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using static System.Math;
 using Humanizer;
 
 namespace Project_Euler
@@ -16,7 +13,7 @@ namespace Project_Euler
 			var sw = new Stopwatch();
 			sw.Start();
 
-			for (int i = 1; i <= 1000; i++)
+			for(int i = 1; i <= 1000; i++)
 				r += i.ToWords().Dehumanize().Length;
 
 			sw.Stop();

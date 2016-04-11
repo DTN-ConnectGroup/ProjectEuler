@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project_Euler
 {
@@ -16,24 +13,20 @@ namespace Project_Euler
 			var sw = new Stopwatch();
 			sw.Start();
 
-
 			var primes = new List<ulong> { 2 };
 			bool isPrime = false;
 
-
-			for (ulong i = 2; i < 2000000; i++)
+			for(ulong i = 2; i < 2000000; i++)
 			{
 				isPrime = true;
-				foreach (ulong p in primes)
-				{
-					if (i % p == 0)
+				foreach(ulong p in primes)
+					if(i % p == 0)
 					{
 						isPrime = false;
 						break;
 					}
-				}
 
-				if (isPrime)
+				if(isPrime)
 				{
 					primes.Add(i);
 					r += i;

@@ -40,44 +40,37 @@ namespace Project_Euler
 			sw.Start();
 
 			// Diagonal checks
-			for (int x = 0; x < 17; x++)
-			{
-				for (int y = 0; y < 17; y++)
+			for(int x = 0; x < 17; x++)
+				for(int y = 0; y < 17; y++)
 				{
 					p = grid[x, y] * grid[x + 1, y + 1] * grid[x + 2, y + 2] * grid[x + 3, y + 3];
 					r = p > r ? p : r;
 				}
-			}
 
 			// Other Diagonal Checkes
-			for (int x = 19; x > 2; x--)
-			{
-				for (int y = 0; y < 17; y++)
+			for(int x = 19; x > 2; x--)
+				for(int y = 0; y < 17; y++)
 				{
 					p = grid[x, y] * grid[x - 1, y + 1] * grid[x - 2, y + 2] * grid[x - 3, y + 3];
 					r = p > r ? p : r;
 				}
-			}
 
 			// Horizontal checks
-			for (int x = 0; x < 20; x++)
-			{
-				for (int y = 0; y < 17; y++)
+			for(int x = 0; x < 20; x++)
+				for(int y = 0; y < 17; y++)
 				{
 					p = grid[x, y] * grid[x, y + 1] * grid[x, y + 2] * grid[x, y + 3];
 					r = p > r ? p : r;
 				}
-			}
+
 
 			// Vertical checks
-			for (int x = 0; x < 17; x++)
-			{
-				for (int y = 0; y < 20; y++)
+			for(int x = 0; x < 17; x++)
+				for(int y = 0; y < 20; y++)
 				{
 					p = grid[x, y] * grid[x + 1, y] * grid[x + 2, y] * grid[x + 3, y];
 					r = p > r ? p : r;
 				}
-			}
 
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);

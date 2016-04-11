@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project_Euler
 {
@@ -11,7 +8,7 @@ namespace Project_Euler
 	{
 		public static void Run()
 		{
-			Console.WriteLine("Project Euler - 18: Maximum path sum I"); 
+			Console.WriteLine("Project Euler - 18: Maximum path sum I");
 			var r = 0;
 			var sw = new Stopwatch();
 			sw.Start();
@@ -56,8 +53,8 @@ namespace Project_Euler
 				var sndArray = numList[i + 1];
 				for(int j = 0; j < sndArray.Length; j++)
 					sndArray[j] += Math.Max(fstArray[j], fstArray[j + 1]);
-				
-				if (sndArray.Length == 1)
+
+				if(sndArray.Length == 1)
 					r = sndArray[0];
 			}
 

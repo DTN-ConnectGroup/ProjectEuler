@@ -13,10 +13,8 @@ namespace Project_Euler
 			sw.Start();
 
 			for(int i = 1; i < 10000; i++)
-			{
 				if(IsAmicable(i))
 					r += i;
-			}
 
 			sw.Stop();
 			Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
@@ -28,7 +26,6 @@ namespace Project_Euler
 		{
 			var val = 0d;
 			for(int i = 1; i * i <= x; i++)
-			{
 				if(x % i == 0)
 				{
 					val += i;
@@ -39,14 +36,13 @@ namespace Project_Euler
 					// This is the arithmatically correct version.
 					// Rewritten into an ugly oneliner in Problem 23.
 				}
-			}
 			return val - x;
 		}
 
 		static bool IsAmicable(double x)
 		{
 			var y = DivisorSum(x);
-			return (x == DivisorSum(y) && x!= y);
+			return (x == DivisorSum(y) && x != y);
 		}
 	}
 }

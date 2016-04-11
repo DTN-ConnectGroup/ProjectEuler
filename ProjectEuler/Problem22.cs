@@ -17,11 +17,7 @@ namespace Project_Euler
 			Array.Sort(nameArray);
 
 			for(int i = 0; i < nameArray.Length; i++)
-			{
-				var name = nameArray[i].Substring(1, nameArray[i].Length - 2);
-				var abcValue = GetAlphabeticalValue(name);
-				r += abcValue * (i + 1);
-			}
+				r += nameArray[i].Substring(1, nameArray[i].Length - 2).GetAlphabeticalValue();
 
 			sw.Stop();
 			Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
@@ -29,7 +25,7 @@ namespace Project_Euler
 			Console.ReadKey();
 		}
 
-		private static int GetAlphabeticalValue(string name)
+		private static int GetAlphabeticalValue(this string name)
 		{
 			const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			var r = 0;

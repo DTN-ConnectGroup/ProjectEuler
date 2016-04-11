@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using static System.Math;
 
 //namespace Project_Euler
@@ -19,7 +17,7 @@ using static System.Math;
 //			for (int i = n; i >= 2; i--)
 //				r += DeFacto(n);
 
-			// DRAFT SOLUTION DOESNT WORK
+// DRAFT SOLUTION DOESNT WORK
 
 //			sw.Stop();
 //			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
@@ -71,19 +69,18 @@ namespace Project_Euler
 			var m = Pow(2, 2 * n) - (Pow(2, n) - 1);
 			var sm = Convert.ToString((long)m, 2);
 
-			for (long i = (int)(Pow(2, n) - 1); i < m; i += 2)
+			for(long i = (int)(Pow(2, n) - 1); i < m; i += 2)
 			{
 				var s = Convert.ToString(i, 2);
 
 				// stolen from http://stackoverflow.com/questions/5340564/counting-how-many-times-a-certain-char-appears-in-a-string-before-any-other-char
 				var count = NumberOfOnes(s, '1');
-				if (count == n)
-				{
-					Console.WriteLine(s + " < " + sm);
+				if(count == n)
 					r++;
-				}
 			}
+
 			r *= 2;
+
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
 			Console.WriteLine("Result:		{0}", r);
@@ -94,8 +91,8 @@ namespace Project_Euler
 		{
 			int count = 0;
 
-			foreach (char ch in text)
-				if (ch.Equals(c))
+			foreach(char ch in text)
+				if(ch.Equals(c))
 					count++;
 
 			return count;

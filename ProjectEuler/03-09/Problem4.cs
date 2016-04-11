@@ -17,22 +17,16 @@ namespace Project_Euler
 
 
 			var threeDigitNums = new List<int>();
-			for (int i = 100; i <= 999; i++)
+			for(int i = 100; i <= 999; i++)
 				threeDigitNums.Add(i);
 
-			foreach (int i in threeDigitNums)
-			{
-				foreach (int j in threeDigitNums)
+			foreach(int i in threeDigitNums)
+				foreach(int j in threeDigitNums)
 				{
 					u = i * j;
-					if (IsPalindrome(u))
-					{
+					if(IsPalindrome(u))
 						r = u > r ? u : r;
-					}
-
 				}
-			}
-
 
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);

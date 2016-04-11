@@ -17,26 +17,22 @@ namespace Project_Euler
 			var primes = new List<long> { 2 };
 			bool isPrime = false;
 
-
-			for (int i = 2; primes.Count < 10001; i++)
+			for(int i = 2; primes.Count < 10001; i++)
 			{
 				isPrime = true;
-				foreach (long p in primes)
-				{
-					if (i % p == 0)
+				foreach(long p in primes)
+					if(i % p == 0)
 					{
 						isPrime = false;
 						break;
 					}
-				}
 
-				if (isPrime)
-				{
+				if(isPrime)
 					primes.Add(i);
-				}
 			}
 
 			r = primes.Last();
+
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
 			Console.WriteLine("Result:		{0}", r);

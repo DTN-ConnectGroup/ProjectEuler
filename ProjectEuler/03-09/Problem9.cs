@@ -13,19 +13,12 @@ namespace Project_Euler
 			sw.Start();
 
 			var limit = 1000;
-			for (double a = 1; r == 1 && a < limit; a++)
-			{
-				for (double b = a; r == 1 && b < limit; b++)
-				{
-					for (double c = b; r == 1 && c < limit; c++)
-					{
-						if ((a * a) + (b * b) == (c * c) && a + b + c == 1000)
-						{
+			for(double a = 1; r == 1 && a < limit; a++)
+				for(double b = a; r == 1 && b < limit; b++)
+					for(double c = b; r == 1 && c < limit; c++)
+						if((a * a) + (b * b) == (c * c) && a + b + c == 1000)
 							r = a * b * c;
-						}
-					}
-				}
-			}
+
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
 			Console.WriteLine("Result:		{0}", r);

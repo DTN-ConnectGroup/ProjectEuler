@@ -37,16 +37,16 @@ namespace Project_Euler
 				.ToCharArray();
 			int c = 13;
 
-			for (int i = 0; (i + c - 1) < s.Length; i++)
+			for(int i = 0; (i + c - 1) < s.Length; i++)
 			{
 				long[] numbs = new long[c];
-				for (int j = 0; j < c; j++)
+				for(int j = 0; j < c; j++)
 				{
 					var w = i + j;
 					numbs[j] = Convert.ToInt64(s[w].ToString());
 				}
 				var temp = 1L;
-				foreach (long j in numbs)
+				foreach(long j in numbs)
 					temp *= j;
 
 				r = temp > r ? temp : r;

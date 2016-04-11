@@ -12,16 +12,10 @@ namespace Project_Euler
 			var sw = new Stopwatch();
 			sw.Start();
 
-			for (double i = 5; i < Math.Sqrt(r); i += 2)
-			{
-				if (isPrime(i))
-				{
-					while (r % i == 0)
-					{
+			for(double i = 5; i < Math.Sqrt(r); i += 2)
+				if(isPrime(i))
+					while(r % i == 0)
 						r /= i;
-					}
-				}
-			}
 
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
@@ -32,17 +26,18 @@ namespace Project_Euler
 		static bool isPrime(double nDbl)
 		{
 			int n = (int)nDbl;
-			if (n <= 1)
+			if(n <= 1)
 				return false;
-			else if (n <= 3)
+			else if(n <= 3)
 				return true;
-			else if (n % 2 == 0 || n % 3 == 0)
+			else if(n % 2 == 0 || n % 3 == 0)
 				return false;
 
 			// This is from Stack Overflow: http://stackoverflow.com/questions/15414970/fermat-primality-test
-			var a = n - 1; ;
+			var a = n - 1;
+			;
 			var b = 1;
-			for (int i = 0; i < n; i++)
+			for(int i = 0; i < n; i++)
 			{
 				b *= a;
 				b %= n;
@@ -50,18 +45,16 @@ namespace Project_Euler
 
 			b -= a;
 
-			if (b != 0)
-			{
+			if(b != 0)
 				return false;
-			}
 			else
 			{
 				// Just to be sure
 				int i = 5;
 				int w = 2;
-				while (i * i <= n)
+				while(i * i <= n)
 				{
-					if (n % i == 0)
+					if(n % i == 0)
 						return false;
 
 					i += w;

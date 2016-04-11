@@ -117,20 +117,20 @@ namespace Project_Euler
 
 			var actualList = new string[100];
 
-			for (int i = 0; i < 100; i++)
+			for(int i = 0; i < 100; i++)
 				actualList[i] = bigNumList.Substring(i * 52, 50);
 
 			var tempList = new List<double>();
-			for (int n = 0; n < 50; n++)
+			for(int n = 0; n < 50; n++)
 			{
-				for (int i = 0; i < 100; i++)
+				for(int i = 0; i < 100; i++)
 				{
 					var s = actualList[i];
 					tempList.Add(Convert.ToDouble(s.Last().ToString()));
 					actualList[i] = s.Substring(0, s.Length - 1);
 				}
 
-				foreach (double d in tempList)
+				foreach(double d in tempList)
 					r += d;
 
 				tempList = new List<double>();
