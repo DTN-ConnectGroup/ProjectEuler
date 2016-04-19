@@ -12,9 +12,7 @@ namespace Project_Euler
 			Console.WriteLine("Project Euler - 4");
 			var r = 0;
 			var sw = new Stopwatch();
-			var u = 0;
 			sw.Start();
-
 
 			var threeDigitNums = new List<int>();
 			for(int i = 100; i <= 999; i++)
@@ -22,11 +20,7 @@ namespace Project_Euler
 
 			foreach(int i in threeDigitNums)
 				foreach(int j in threeDigitNums)
-				{
-					u = i * j;
-					if(IsPalindrome(u))
-						r = u > r ? u : r;
-				}
+					r = (IsPalindrome(i * j) && i * j > r) ? i * j : r;
 
 			sw.Stop();
 			Console.WriteLine("Time elapsed:	{0}", sw.ElapsedMilliseconds);
@@ -34,12 +28,7 @@ namespace Project_Euler
 			Console.ReadKey();
 		}
 
-
-		private static bool IsPalindrome(int n)
-		{
-			var nO = n.ToString();
-			var nR = new string(nO.Reverse<char>().ToArray());
-			return nO == nR;
-		}
+		static bool IsPalindrome(int n) => n.ToString() == new string(n.ToString().Reverse<char>().ToArray());
+		
 	}
 }

@@ -41,10 +41,8 @@ namespace Project_Euler
 			{
 				long[] numbs = new long[c];
 				for(int j = 0; j < c; j++)
-				{
-					var w = i + j;
-					numbs[j] = Convert.ToInt64(s[w].ToString());
-				}
+					numbs[j] = Convert.ToInt64(s[i + j].ToString());
+
 				var temp = 1L;
 				foreach(long j in numbs)
 					temp *= j;
