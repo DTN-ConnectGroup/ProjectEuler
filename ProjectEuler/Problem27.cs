@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Numerics;
 
 namespace Project_Euler
 {
@@ -8,7 +7,7 @@ namespace Project_Euler
 	{
 		public static void Run()
 		{
-			Console.WriteLine("Project Euler - 26: Reciprocal cycles");
+			Console.WriteLine("Project Euler - 27: Quadratic primes");
 			var r = 0d;
 			var sw = new Stopwatch();
 			sw.Start();
@@ -35,9 +34,8 @@ namespace Project_Euler
 			Console.ReadKey();
 		}
 
-		static bool isPrime(double nDbl)
+		static bool isPrime(int n)
 		{
-			int n = (int)Math.Abs(nDbl);
 			if(n <= 1)
 				return false;
 			else if(n <= 3)
