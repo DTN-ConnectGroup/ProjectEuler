@@ -36,15 +36,15 @@ namespace Project_Euler
 
 		static bool isPrime(int n)
 		{
-			if(n <= 1)
-				return false;
-			else if(n <= 3)
-				return true;
-			else if(n % 2 == 0 || n % 3 == 0)
-				return false;
+            if(n <= 1)
+                return false;
+            if(n <= 3)
+                return true;
+            if(n % 2 == 0 || n % 3 == 0)
+                return false;
 
-			// This is from Stack Overflow: http://stackoverflow.com/questions/15414970/fermat-primality-test
-			var a = n - 1;
+            // This is from Stack Overflow: http://stackoverflow.com/questions/15414970/fermat-primality-test
+            var a = n - 1;
 			var b = 1;
 			for(int i = 0; i < n; i++)
 			{
@@ -54,23 +54,20 @@ namespace Project_Euler
 
 			b -= a;
 
-			if(b != 0)
-				return false;
-			else
-			{
-				// Just to be sure
-				int i = 5;
-				int w = 2;
-				while(i * i <= n)
-				{
-					if(n % i == 0)
-						return false;
+            if(b != 0)
+                return false;
+            // Just to be sure
+            int iter = 5;
+            int w = 2;
+            while(iter * iter <= n)
+            {
+                if(n % iter == 0)
+                    return false;
 
-					i += w;
-					w = 6 - w;
-				}
-				return true;
-			}
-		}
+                iter += w;
+                w = 6 - w;
+            }
+            return true;
+        }
 	}
 }

@@ -25,15 +25,15 @@ namespace Project_Euler
 			Console.ReadKey();
 		}
 
-		private static int GetAlphabeticalValue(this string name)
-		{
-			const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			var r = 0;
+        static int GetAlphabeticalValue(this string name)
+        {
+            const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var r = 0;
 
-			foreach(char c in name)
-				r += (alphabet.IndexOf(c) + 1);
+            foreach(char c in name)
+                r += (alphabet.IndexOf(c) + 1);
 
-			return r;
-		}
-	}
+            return r;
+        }
+    }
 }

@@ -38,11 +38,8 @@ namespace Project_Euler
 			var n = number;
 			for(ulong i = 0; n != 1; i++)
 			{
-				if(n % 2 == 0)
-					n /= 2;
-				else
-					n = 3 * n + 1;
-				count++;
+                n = n % 2 == 0 ? n / 2 : 3 * n + 1;
+                count++;
 			}
 
 			return count;

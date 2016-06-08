@@ -28,7 +28,7 @@ namespace Project_Euler
 			Console.ReadKey();
 		}
 
-		static bool IsPalindrome(int n) => n.ToString() == new string(n.ToString().Reverse<char>().ToArray());
+		static bool IsPalindrome(int n) => n.ToString() == new string(n.ToString().Reverse().ToArray());
 		
 	}
 }

@@ -15,7 +15,7 @@ namespace Project_Euler
 			var fstDay = new DateTime(1901, 1, 1);
 			var lstDay = new DateTime(2000, 12, 31);
 
-			DateTime tempDay = fstDay;
+			var tempDay = fstDay;
 
 			for(int i = 0; tempDay <= lstDay; i++)
 				if(fstDay.AddDays(i).Day == 1 && tempDay.DayOfWeek == DayOfWeek.Sunday)
