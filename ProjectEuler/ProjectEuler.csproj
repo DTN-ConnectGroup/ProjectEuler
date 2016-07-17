@@ -75,6 +75,7 @@
     <Compile Include="20-29\Problem26.cs" />
     <Compile Include="20-29\Problem27.cs" />
     <Compile Include="20-29\Problem28.cs" />
+    <Compile Include="Problem30.cs" />
     <Compile Include="Problem67.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
