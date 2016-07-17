@@ -25,18 +25,15 @@ namespace Project_Euler
             return r;
         }
 
-        static ulong StoppingTime(ulong number)
-        {
-            ulong count = 1;
-            var n = number;
-            for(ulong i = 0; n != 1; i++)
-            {
-                if(n % 2 == 0)
-                    n /= 2;
-                else
-                    n = 3 * n + 1;
+		static ulong StoppingTime(ulong number)
+		{
+			ulong count = 1;
+			var n = number;
+			for(ulong i = 0; n != 1; i++)
+			{
+                n = n % 2 == 0 ? n / 2 : 3 * n + 1;
                 count++;
-            }
+			}
 
             return count;
         }
