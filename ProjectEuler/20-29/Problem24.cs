@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Linq;
 
 namespace Project_Euler
 {
 	static class Problem24
 	{
-		public static void Run()
+		public static long Run()
 		{
 			Console.WriteLine("Project Euler - 24: Lexicographic permutations");
 			var r = 0L;
-			var sw = new Stopwatch();
-			sw.Start();
-
+		
 			var fstNumber = 0123456789;
 			var lstNumber = 9876543210;
 
@@ -45,10 +42,7 @@ namespace Project_Euler
 					break;
 			}
 
-			sw.Stop();
-			Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
-			Console.WriteLine($"Result:		{r}");
-			Console.ReadKey();
+            return r;
 		}
 	}
 }

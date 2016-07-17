@@ -1,36 +1,49 @@
 ﻿using System;
-using System.Diagnostics;
 
 namespace Project_Euler
 {
-    static class Problem3
+    static class Problem27
     {
         public static double Run()
         {
-            Console.WriteLine("We're just starting out baby. Project Euler - 3");
-            double r = 600851475143;
+            Console.WriteLine("Project Euler - 27: Quadratic primes");
+            var r = 0d;
+            var z = 1d;
 
-            for(double i = 5; i < Math.Sqrt(r); i += 2)
-                if(isPrime(i))
-                    while(r % i == 0)
-                        r /= i;
+            for(int a = -999; a < 1000; a++)
+            {
+                for(int b = -999; b < 1000; b++)
+                {
+                    for(int n = 0; ; n++)
+                    {
+                        if(!isPrime(n * n + a * n + b))
+                        {
+                            if(n > z)
+                            {
+                                r = a * b;
+                                z = n;
+                            }
+
+                            break;
+                        }
+                    }
+                }
+            }
 
             return r;
         }
 
-        static bool isPrime(double nDbl)
+        static bool isPrime(int n)
         {
-            var n = (int)nDbl;
             if(n <= 1)
                 return false;
-            if(n <= 3)
+            else if(n <= 3)
                 return true;
-            if(n % 2 == 0 || n % 3 == 0)
+            else if(n % 2 == 0 || n % 3 == 0)
                 return false;
 
             // This is from Stack Overflow: http://stackoverflow.com/questions/15414970/fermat-primality-test
             var a = n - 1;
-
             var b = 1;
             for(int i = 0; i < n; i++)
             {

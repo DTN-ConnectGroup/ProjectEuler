@@ -4,17 +4,14 @@ using System.Diagnostics;
 
 namespace Project_Euler
 {
-	static class Problem18
-	{
-		public static void Run()
-		{
-			Console.WriteLine("Project Euler - 18: Maximum path sum I");
-			var r = 0;
-			var sw = new Stopwatch();
-			sw.Start();
+    static class Problem18
+    {
+        public static int Run()
+        {
+            Console.WriteLine("Project Euler - 18: Maximum path sum I");
+            var r = 0;
 
-			#region Setup
-			var theNumbers =
+            var theNumbers =
 @"75
 95 64
 17 47 82
@@ -31,40 +28,44 @@ namespace Project_Euler
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23";
 
-			var linesArray = theNumbers.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-			var numList = new List<int[]>();
+            var numList = SetUp(theNumbers);
 
-			foreach(string s in linesArray)
-			{
-				var numStringArray = (s.Split(new string[] { " " }, StringSplitOptions.None));
-				var numIntArray = new int[numStringArray.Length];
+            numList.Reverse();
 
-				for(int i = 0; i < numStringArray.Length; i++)
-					numIntArray[i] = Convert.ToInt32(numStringArray[i]);
+            for(int i = 0; i < numList.Count - 1; i++)
+            {
+                var fstArray = numList[i];
+                var sndArray = numList[i + 1];
+                for(int j = 0; j < sndArray.Length; j++)
+                    sndArray[j] += Math.Max(fstArray[j], fstArray[j + 1]);
 
-				numList.Add(numIntArray);
-			}
-			#endregion
-			numList.Reverse();
+                if(sndArray.Length == 1)
+                    r = sndArray[0];
+            }
 
-			for(int i = 0; i < numList.Count - 1; i++)
-			{
-				var fstArray = numList[i];
-				var sndArray = numList[i + 1];
-				for(int j = 0; j < sndArray.Length; j++)
-					sndArray[j] += Math.Max(fstArray[j], fstArray[j + 1]);
+            // It totally looked the method up. Didnt think of it myself.
+            // I implemented the code myself tho. This counts right ?
 
-				if(sndArray.Length == 1)
-					r = sndArray[0];
-			}
+            return r;
+        }
 
-			// It totally looked the method up. Didnt think of it myself.
-			// I implemented the code myself tho. This counts right ?
+        static List<int[]> SetUp(string theNumbers)
+        {
+            var linesArray = theNumbers.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+            var numList = new List<int[]>();
 
-			sw.Stop();
-			Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
-			Console.WriteLine($"Result:		{r}");
-			Console.ReadKey();
-		}
-	}
+            foreach(string s in linesArray)
+            {
+                var numStringArray = (s.Split(new string[] { " " }, StringSplitOptions.None));
+                var numIntArray = new int[numStringArray.Length];
+
+                for(int i = 0; i < numStringArray.Length; i++)
+                    numIntArray[i] = Convert.ToInt32(numStringArray[i]);
+
+                numList.Add(numIntArray);
+            }
+
+            return numList;
+        }
+    }
 }

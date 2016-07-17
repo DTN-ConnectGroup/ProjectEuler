@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 namespace Project_Euler
 {
     static class Problem29
     {
-        public static void Run()
+        public static int Run()
         {
             Console.WriteLine("Project Euler - 29: Distinct powers");
-            var r = 0d;
-            var sw = new Stopwatch();
-            sw.Start();
 
-            /* F# solution .. much shorter
+
+            /* F# solution .. much nicer
 
             seq {
                     for a in [2.0..1.0..100.0] do
@@ -26,12 +23,7 @@ namespace Project_Euler
 
             */
 
-            r = new HashSet<double>(ListOfPowers(0, 100)).Count;
-
-            sw.Stop();
-            Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
-            Console.WriteLine($"Result:		{r}");
-            Console.ReadKey();
+            return new HashSet<double>(ListOfPowers(0, 100)).Count;
         }
 
         static IEnumerable<double> ListOfPowers(int min, int max)

@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Numerics;
 
 namespace Project_Euler
 {
 	static class Problem25
 	{
-		public static void Run()
+		public static int Run()
 		{
 			Console.WriteLine("Project Euler - 25: 1000-digit Fibonacci number");
-			var r = 0;
-			var sw = new Stopwatch();
-			sw.Start();
 
 			var pastNumber = new BigInteger(0);
 			var currentNumber = new BigInteger(1);
@@ -23,19 +19,12 @@ namespace Project_Euler
 
 				if(fibonacci / BigInteger.Pow(10, 999) > 1)
 				{
-					r = i;
-					break;
+                    return i;
 				}
 
 				pastNumber = currentNumber;
 				currentNumber = fibonacci;
 			}
-
-
-			sw.Stop();
-			Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
-			Console.WriteLine($"Result:		{r}");
-			Console.ReadKey();
 		}
 	}
 }

@@ -61,18 +61,20 @@
     <Compile Include="10-19\Problem11.cs" />
     <Compile Include="10-19\Problem14.cs" />
     <Compile Include="10-19\Problem15.cs" />
+    <Compile Include="10-19\Problem16.cs" />
     <Compile Include="10-19\Problem17.cs" />
-    <Compile Include="Problem22.cs" />
+    <Compile Include="20-29\Problem29.cs" />
+    <Compile Include="20-29\Problem22.cs" />
     <Compile Include="10-19\Problem18.cs" />
     <Compile Include="10-19\Problem19.cs" />
-    <Compile Include="Problem20.cs" />
-    <Compile Include="Problem21.cs" />
-    <Compile Include="Problem23.cs" />
-    <Compile Include="Problem24.cs" />
-    <Compile Include="Problem25.cs" />
-    <Compile Include="Problem26.cs" />
-    <Compile Include="Problem27.cs" />
-    <Compile Include="Problem28.cs" />
+    <Compile Include="20-29\Problem20.cs" />
+    <Compile Include="20-29\Problem21.cs" />
+    <Compile Include="20-29\Problem23.cs" />
+    <Compile Include="20-29\Problem24.cs" />
+    <Compile Include="20-29\Problem25.cs" />
+    <Compile Include="20-29\Problem26.cs" />
+    <Compile Include="20-29\Problem27.cs" />
+    <Compile Include="20-29\Problem28.cs" />
     <Compile Include="Problem67.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +87,7 @@
     <Content Include="Reffed files\p022_names.txt" />
     <Content Include="Reffed files\p067_triangle.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
