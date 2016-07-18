@@ -11,9 +11,6 @@ module Problem29 =
         |> Set.ofSeq
         |> Set.count
 
-
-
-
 module Problem30 =
     let private fifthPower x = x * x * x * x * x
 
