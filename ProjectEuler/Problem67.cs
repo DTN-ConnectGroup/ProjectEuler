@@ -11,7 +11,7 @@ namespace Project_Euler
             var r = 0;
 
             var theNumbers = System.IO.File.ReadAllText(@"..\..\Reffed files\p067_triangle.txt");
-            List<int[]> numList = Setup(theNumbers);
+            var numList = Setup(theNumbers);
 
             numList.Reverse();
 

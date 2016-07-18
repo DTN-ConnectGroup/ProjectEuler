@@ -89,7 +89,12 @@
     <Content Include="Reffed files\p022_names.txt" />
     <Content Include="Reffed files\p067_triangle.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EulerF\EulerF.fsproj">
+      <Project>{d6fbd61e-bc04-4d54-b22d-1f996eb88389}</Project>
+      <Name>EulerF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
