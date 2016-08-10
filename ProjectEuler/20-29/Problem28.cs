@@ -7,10 +7,15 @@ namespace Project_Euler
         public static double Run()
         {
             Console.WriteLine("Project Euler - 28: Number spiral diagonals");
-            var r = 0d;
+            var acc = 1;
 
-            throw new NotImplementedException();
+            for(int i = 1001; i > 1; i -= 2)
+            {
+                var sqn = i * i;
+                acc += sqn + (sqn - i + 1) + (sqn - 2 * i + 2) + (sqn - 3 * i + 3);
+            }
 
+            return acc;
         }
     }
 }
