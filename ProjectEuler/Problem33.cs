@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project_Euler
 {
@@ -10,7 +6,7 @@ namespace Project_Euler
     {
         public static int Run()
         {
-            Console.WriteLine("Project Euler - 30: Digit fifth powers");
+            Console.WriteLine("Project Euler - 33: Digit cancelling fractions");
 
             return EulerF.Problem33.Solution;
         }

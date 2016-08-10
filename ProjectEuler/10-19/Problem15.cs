@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using static System.Math;
 
 //namespace Project_Euler

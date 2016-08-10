@@ -10,7 +10,7 @@ namespace Project_Euler
             var sw = new Stopwatch();
             sw.Start();
 
-            var r = Problem33.Run();
+            var r = Problem7.Run();
 
             sw.Stop();
             Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");

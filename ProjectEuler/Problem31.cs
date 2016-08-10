@@ -1,9 +1,13 @@
-﻿namespace Project_Euler
+﻿using System;
+
+namespace Project_Euler
 {
     static class Problem31
     {
         public static int Run()
         {
+            Console.WriteLine("Project Euler - 31: Coin sums");
+
             var r = 1;
 
             for(int onePenny = 0; onePenny <= 200; onePenny++)

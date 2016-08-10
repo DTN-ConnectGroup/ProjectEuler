@@ -11,11 +11,8 @@ namespace Project_Euler
             var z = 1d;
 
             for(int a = -999; a < 1000; a++)
-            {
                 for(int b = -999; b < 1000; b++)
-                {
                     for(int n = 0; ; n++)
-                    {
                         if(!isPrime(n * n + a * n + b))
                         {
                             if(n > z)
@@ -26,9 +23,6 @@ namespace Project_Euler
 
                             break;
                         }
-                    }
-                }
-            }
 
             return r;
         }
@@ -37,9 +31,9 @@ namespace Project_Euler
         {
             if(n <= 1)
                 return false;
-            else if(n <= 3)
+            if(n <= 3)
                 return true;
-            else if(n % 2 == 0 || n % 3 == 0)
+            if(n % 2 == 0 || n % 3 == 0)
                 return false;
 
             // This is from Stack Overflow: http://stackoverflow.com/questions/15414970/fermat-primality-test

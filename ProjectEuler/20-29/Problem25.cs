@@ -11,13 +11,14 @@ namespace Project_Euler
 
 			var pastNumber = new BigInteger(0);
 			var currentNumber = new BigInteger(1);
+            var bigConstant = BigInteger.Pow(10, 999);
 
-			// Took a lot of trial and error and fidgeting with the numbers.
-			for(int i = 0; ; i++)
+            // Took a lot of trial and error and fidgeting with the numbers.
+            for(int i = 0; ; i++)
 			{
 				var fibonacci = pastNumber + currentNumber;
 
-				if(fibonacci / BigInteger.Pow(10, 999) > 1)
+				if(fibonacci / bigConstant > 1)
 				{
                     return i;
 				}
