@@ -17,7 +17,6 @@ namespace Project_Euler
             return r;
         }
 
-
         static bool IsAmicable(double x)
         {
             var y = Helpers.DivisorSum(x);
