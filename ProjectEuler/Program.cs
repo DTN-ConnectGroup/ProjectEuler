@@ -10,11 +10,11 @@ namespace Project_Euler
             var sw = new Stopwatch();
             sw.Start();
 
-            var r = Problem7.Run();
+            var r = Problem37.Run();
 
             sw.Stop();
-            Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
             Console.WriteLine($"Result:		{r}");
+            Console.WriteLine($"Time elapsed:	{sw.ElapsedMilliseconds}ms");
             Console.ReadKey();
         }
     }
