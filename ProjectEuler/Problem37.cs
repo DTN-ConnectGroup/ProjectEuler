@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using EulerF;
 
 namespace Project_Euler
 {
@@ -20,22 +21,6 @@ namespace Project_Euler
                 }
             }
             return r;
-        }
-
-        static bool IsPrime(int n)
-        {
-            if(n < 2)
-                return false;
-            if(n % 2 == 0)
-                return (n == 2);
-
-            var root = (int)Math.Sqrt(n);
-
-            for(var i = 3; i <= root; i += 2)
-                if(n % i == 0)
-                    return false;
-
-            return true;
         }
 
         static IEnumerable<int> Truncate(int n)
@@ -63,7 +48,7 @@ namespace Project_Euler
 
             foreach(var i in Truncate(n))
             {
-                if(!IsPrime(i))
+                if(!Helpers.IsPrime(i))
                     return false;
             }
 

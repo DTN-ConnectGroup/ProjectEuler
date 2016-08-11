@@ -1,4 +1,5 @@
 ﻿using System;
+using EulerF;
 
 namespace Project_Euler
 {
@@ -7,27 +8,17 @@ namespace Project_Euler
         public static double Run()
         {
             Console.WriteLine("Project Euler - 12: Highly divisible triangular number");
-            double r = 0;
+            var r = 0;
 
             bool isFive = false;
 
             for(int i = 1; !isFive; i++)
             {
                 r += i;
-                isFive = DivisorCount(r) > 500;
+                isFive = Helpers.DivisorCount(r) > 500;
             }
 
             return r;
-
-        }
-
-        static int DivisorCount(double x)
-        {
-            var val = 0;
-            for(int i = 1; i * i <= x; i++)
-                if(x % i == 0)
-                    val += 2;
-            return val;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using EulerF;
 
 namespace Project_Euler
 {
@@ -17,12 +17,9 @@ namespace Project_Euler
 
             foreach(int i in threeDigitNums)
                 foreach(int j in threeDigitNums)
-                    r = (IsPalindrome(i * j) && i * j > r) ? i * j : r;
+                    r = (Helpers.IsPalindrome((i * j).ToString()) && i * j > r) ? i * j : r;
 
             return r;
         }
-
-        static bool IsPalindrome(int n) => n.ToString() == new string(n.ToString().Reverse<char>().ToArray());
-
     }
 }

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Helpers.fs" />
     <Compile Include="Problem29.fs" />
     <Compile Include="Problem30.fs" />
     <Compile Include="Problem33.fs" />

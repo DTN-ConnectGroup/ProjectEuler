@@ -10,17 +10,6 @@ let FindRotations n =
         }
     loop n (n.ToString().Length)
 
-let IsPrime n = 
-    if n <= 1 then false
-    else 
-        let sqrtN = 
-            float n
-            |> sqrt
-            |> int
-        [ 2..sqrtN ]
-        |> List.exists (fun i -> n % i = 0)
-        |> not
-
 let AreAllRotsPrime n = 
     // These optimizations are not my idea !!
     //
@@ -31,7 +20,7 @@ let AreAllRotsPrime n =
             str.Contains("5") || str.Contains("0") || str.Contains("2") || str.Contains("4") || str.Contains("6") 
             || str.Contains("8")
         if sleazyTest then false
-        else FindRotations n |> Seq.forall IsPrime
+        else FindRotations n |> Seq.forall Helpers.IsPrime
 
 let Solution = 
     [ 1..1000000 ]
