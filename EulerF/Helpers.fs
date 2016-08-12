@@ -54,3 +54,9 @@ let private FibonacciBigIntAux =
     Memoize naive
 
 let FibonacciBigInt n = FibonacciBigIntAux n
+
+let rec Digits n = 
+    seq { 
+        yield n % 10
+        if n / 10 <> 0 then yield! Digits(n / 10)
+    }

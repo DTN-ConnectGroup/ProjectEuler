@@ -12,7 +12,6 @@ let FindRotations n =
 
 let AreAllRotsPrime n = 
     // These optimizations are not my idea !!
-    //
     if n = 2 || n = 3 || n = 5 || n = 7 then true
     else 
         let str = n.ToString()

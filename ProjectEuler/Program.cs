@@ -10,7 +10,7 @@ namespace Project_Euler
             var sw = new Stopwatch();
             sw.Start();
 
-            var r = Problem25.Run();
+            var r = Problem40.Run();
 
             sw.Stop();
             Console.WriteLine($"Result:		{r}");
