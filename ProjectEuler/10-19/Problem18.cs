@@ -5,9 +5,9 @@ namespace Project_Euler
 {
     static class Problem18
     {
-        public static int Run()
+        public static int Run ()
         {
-            Console.WriteLine("Project Euler - 18: Maximum path sum I");
+            Console.WriteLine ("Project Euler - 18: Maximum path sum I");
             var r = 0;
 
             var theNumbers =
@@ -27,18 +27,18 @@ namespace Project_Euler
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23";
 
-            var numList = SetUp(theNumbers);
+            var numList = SetUp (theNumbers);
 
-            numList.Reverse();
+            numList.Reverse ();
 
-            for(int i = 0; i < numList.Count - 1; i++)
+            for (var i = 0; i < numList.Count - 1; i++)
             {
                 var fstArray = numList[i];
                 var sndArray = numList[i + 1];
-                for(int j = 0; j < sndArray.Length; j++)
-                    sndArray[j] += Math.Max(fstArray[j], fstArray[j + 1]);
+                for (var j = 0; j < sndArray.Length; j++)
+                    sndArray[j] += Math.Max (fstArray[j], fstArray[j + 1]);
 
-                if(sndArray.Length == 1)
+                if (sndArray.Length == 1)
                     r = sndArray[0];
             }
 
@@ -48,20 +48,20 @@ namespace Project_Euler
             return r;
         }
 
-        static List<int[]> SetUp(string theNumbers)
+        static List<int[]> SetUp (string theNumbers)
         {
-            var linesArray = theNumbers.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-            var numList = new List<int[]>();
+            var linesArray = theNumbers.Split (new string[] { Environment.NewLine }, StringSplitOptions.None);
+            var numList = new List<int[]> ();
 
-            foreach(string s in linesArray)
+            foreach (string s in linesArray)
             {
-                var numStringArray = (s.Split(new string[] { " " }, StringSplitOptions.None));
+                var numStringArray = (s.Split (new string[] { " " }, StringSplitOptions.None));
                 var numIntArray = new int[numStringArray.Length];
 
-                for(int i = 0; i < numStringArray.Length; i++)
-                    numIntArray[i] = Convert.ToInt32(numStringArray[i]);
+                for (var i = 0; i < numStringArray.Length; i++)
+                    numIntArray[i] = Convert.ToInt32 (numStringArray[i]);
 
-                numList.Add(numIntArray);
+                numList.Add (numIntArray);
             }
 
             return numList;

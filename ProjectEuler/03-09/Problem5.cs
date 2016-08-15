@@ -4,22 +4,22 @@ namespace Project_Euler
 {
     static class Problem5
     {
-        public static int Run()
+        public static int Run ()
         {
-            Console.WriteLine("Project Euler - 5: Smallest Multiple");
+            Console.WriteLine ("Project Euler - 5: Smallest Multiple");
             var r = 1;
 
             var numbers = new int[20];
-            for(int i = 0; i < 20; i++)
+            for (var i = 0; i < 20; i++)
                 numbers[i] = i + 1;
 
             var resolved = false;
 
-            for(int i = 20; !resolved; i += 20)
+            for (var i = 20; !resolved; i += 20)
             {
                 resolved = true;
                 r = i;
-                foreach(int n in numbers)
+                foreach (var n in numbers)
                     resolved &= i % n == 0;
             }
 

@@ -1,35 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using EulerF;
 
 namespace Project_Euler
 {
     static class Problem10
     {
-        public static ulong Run()
+        public static ulong Run ()
         {
-            Console.WriteLine("Project Euler - 10: Summation of primes");
-            ulong r = 2;
-          
+            Console.WriteLine ("Project Euler - 10: Summation of primes");
+            // More efficient than using EulerF.Helpers.PrimeSeq for some reason
+            var r = 2ul;
             var primes = new List<ulong> { 2 };
-            bool isPrime = false;
 
-            for(ulong i = 2; i < 2000000; i++)
+            var isPrime = false;
+
+            for (var i = 2ul; i < 2000000; i++)
             {
                 isPrime = true;
-                foreach(ulong p in primes)
-                    if(i % p == 0)
+                foreach (var p in primes)
+                    if (i % p == 0)
                     {
                         isPrime = false;
                         break;
                     }
-
-                if(isPrime)
+                if (isPrime)
                 {
-                    primes.Add(i);
+                    primes.Add (i);
                     r += i;
                 }
             }
-
             return r;
         }
     }

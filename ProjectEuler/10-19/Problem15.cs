@@ -51,9 +51,9 @@ namespace Project_Euler
 {
     static class Problem15
     {
-        public static long Run()
+        public static long Run ()
         {
-            Console.WriteLine("Project Euler - 15: Lattice paths");
+            Console.WriteLine ("Project Euler - 15: Lattice paths");
             long r = 0;
 
             // This works but is extremely inefficient
@@ -63,16 +63,16 @@ namespace Project_Euler
 
             long n = 20;
 
-            var m = Pow(2, 2 * n) - (Pow(2, n) - 1);
-            var sm = Convert.ToString((long)m, 2);
+            var m = Pow (2, 2 * n) - (Pow (2, n) - 1);
+            var sm = Convert.ToString ((long) m, 2);
 
-            for(long i = (int)(Pow(2, n) - 1); i < m; i += 2)
+            for (long i = (int) (Pow (2, n) - 1); i < m; i += 2)
             {
-                var s = Convert.ToString(i, 2);
+                var s = Convert.ToString (i, 2);
 
                 // stolen from http://stackoverflow.com/questions/5340564/counting-how-many-times-a-certain-char-appears-in-a-string-before-any-other-char
-                var count = NumberOfOnes(s, '1');
-                if(count == n)
+                var count = NumberOfOnes (s, '1');
+                if (count == n)
                     r++;
             }
 
@@ -81,12 +81,12 @@ namespace Project_Euler
             return r;
         }
 
-        public static int NumberOfOnes(string text, char c)
+        public static int NumberOfOnes (string text, char c)
         {
             int count = 0;
 
-            foreach(char ch in text)
-                if(ch.Equals(c))
+            foreach (char ch in text)
+                if (ch.Equals (c))
                     count++;
 
             return count;

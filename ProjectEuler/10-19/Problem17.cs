@@ -10,7 +10,7 @@ namespace Project_Euler
             Console.WriteLine("Project Euler - 17: Number letter counts");
             var r = 0;
 
-            for(int i = 1; i <= 1000; i++)
+            for(var i = 1; i <= 1000; i++)
                 r += i.ToWords().Dehumanize().Length;
 
             return r;

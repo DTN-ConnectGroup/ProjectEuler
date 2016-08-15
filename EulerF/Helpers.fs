@@ -28,7 +28,7 @@ let IsPrime n = IsPrimeAux n
 let PrimesSeq = 
     let rec loop iter cache = 
         seq { 
-            if Set.exists (fun p -> iter % p = 0) cache then 
+            if Set.exists (fun p -> p > int(sqrt(float iter)) && iter % p = 0) cache then 
                 yield! loop (iter + 1) cache
             else 
                 yield iter

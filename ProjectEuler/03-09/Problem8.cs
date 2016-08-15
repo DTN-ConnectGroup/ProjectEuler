@@ -4,9 +4,9 @@ namespace Project_Euler
 {
     static class Problem8
     {
-        public static long Run()
+        public static long Run ()
         {
-            Console.WriteLine("Project Euler - 8: Largest product in a series");
+            Console.WriteLine ("Project Euler - 8: Largest product in a series");
             var r = 0L;
 
             // Apparently I need to use Unsigned Integers or Longs. 
@@ -32,18 +32,18 @@ namespace Project_Euler
                 "84580156166097919133875499200524063689912560717606" +
                 "05886116467109405077541002256983155200055935729725" +
                 "71636269561882670428252483600823257530420752963450")
-                .ToCharArray();
+                .ToCharArray ();
 
-            int c = 13;
+            var c = 13;
 
-            for(int i = 0; (i + c - 1) < s.Length; i++)
+            for (var i = 0; (i + c - 1) < s.Length; i++)
             {
                 long[] numbs = new long[c];
-                for(int j = 0; j < c; j++)
-                    numbs[j] = Convert.ToInt64(s[i + j].ToString());
+                for (var j = 0; j < c; j++)
+                    numbs[j] = Convert.ToInt64 (s[i + j].ToString ());
 
                 var temp = 1L;
-                foreach(long j in numbs)
+                foreach (var j in numbs)
                     temp *= j;
 
                 r = temp > r ? temp : r;

@@ -4,9 +4,9 @@ namespace Project_Euler
 {
     static class Problem35
     {
-        public static int Run()
+        public static int Run ()
         {
-            Console.WriteLine("Project Euler - 35: Circular primes");
+            Console.WriteLine ("Project Euler - 35: Circular primes");
 
             return EulerF.Problem35.Solution;
         }

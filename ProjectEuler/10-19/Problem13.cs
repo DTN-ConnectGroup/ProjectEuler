@@ -6,10 +6,10 @@ namespace Project_Euler
 {
     static class Problem13
     {
-        public static double Run()
+        public static double Run ()
         {
-            Console.WriteLine("Project Euler - 13: Large sum");
-            double r = 0;
+            Console.WriteLine ("Project Euler - 13: Large sum");
+            var r = 0d;
 
             var bigNumList = @"37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
@@ -114,23 +114,23 @@ namespace Project_Euler
 
             var actualList = new string[100];
 
-            for(int i = 0; i < 100; i++)
-                actualList[i] = bigNumList.Substring(i * 52, 50);
+            for (var i = 0; i < 100; i++)
+                actualList[i] = bigNumList.Substring (i * 52, 50);
 
-            var tempList = new List<double>();
-            for(int n = 0; n < 50; n++)
+            var tempList = new List<double> ();
+            for (var n = 0; n < 50; n++)
             {
-                for(int i = 0; i < 100; i++)
+                for (var i = 0; i < 100; i++)
                 {
                     var s = actualList[i];
-                    tempList.Add(Convert.ToDouble(s.Last().ToString()));
-                    actualList[i] = s.Substring(0, s.Length - 1);
+                    tempList.Add (Convert.ToDouble (s.Last ().ToString ()));
+                    actualList[i] = s.Substring (0, s.Length - 1);
                 }
 
-                foreach(double d in tempList)
+                foreach (var d in tempList)
                     r += d;
 
-                tempList = new List<double>();
+                tempList = new List<double> ();
 
                 r /= 10;
             }

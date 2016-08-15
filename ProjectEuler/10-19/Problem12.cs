@@ -5,17 +5,17 @@ namespace Project_Euler
 {
     static class Problem12
     {
-        public static double Run()
+        public static double Run ()
         {
-            Console.WriteLine("Project Euler - 12: Highly divisible triangular number");
+            Console.WriteLine ("Project Euler - 12: Highly divisible triangular number");
             var r = 0;
 
-            bool isFive = false;
+            var isFive = false;
 
-            for(int i = 1; !isFive; i++)
+            for (var i = 1; !isFive; i++)
             {
                 r += i;
-                isFive = Helpers.DivisorCount(r) > 500;
+                isFive = Helpers.DivisorCount (r) > 500;
             }
 
             return r;

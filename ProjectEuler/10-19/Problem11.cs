@@ -4,9 +4,9 @@ namespace Project_Euler
 {
     static class Problem11
     {
-        public static ulong Run()
+        public static ulong Run ()
         {
-            Console.WriteLine("Project Euler - 11: Largest product in a grid");
+            Console.WriteLine ("Project Euler - 11: Largest product in a grid");
             ulong r = 1;
 
             // Setup
@@ -32,27 +32,27 @@ namespace Project_Euler
                 {20, 73, 35, 29, 78, 31, 90, 01, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 05, 54},
                 {01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}
             };
-            ulong p = 1;
+            var p = 1ul;
 
             // Diagonal checks
-            for(int x = 0; x < 17; x++)
-                for(int y = 0; y < 17; y++)
+            for (var x = 0; x < 17; x++)
+                for (var y = 0; y < 17; y++)
                 {
                     p = grid[x, y] * grid[x + 1, y + 1] * grid[x + 2, y + 2] * grid[x + 3, y + 3];
                     r = p > r ? p : r;
                 }
 
             // Other Diagonal Checkes
-            for(int x = 19; x > 2; x--)
-                for(int y = 0; y < 17; y++)
+            for (var x = 19; x > 2; x--)
+                for (var y = 0; y < 17; y++)
                 {
                     p = grid[x, y] * grid[x - 1, y + 1] * grid[x - 2, y + 2] * grid[x - 3, y + 3];
                     r = p > r ? p : r;
                 }
 
             // Horizontal checks
-            for(int x = 0; x < 20; x++)
-                for(int y = 0; y < 17; y++)
+            for (var x = 0; x < 20; x++)
+                for (var y = 0; y < 17; y++)
                 {
                     p = grid[x, y] * grid[x, y + 1] * grid[x, y + 2] * grid[x, y + 3];
                     r = p > r ? p : r;
@@ -60,8 +60,8 @@ namespace Project_Euler
 
 
             // Vertical checks
-            for(int x = 0; x < 17; x++)
-                for(int y = 0; y < 20; y++)
+            for (var x = 0; x < 17; x++)
+                for (var y = 0; y < 20; y++)
                 {
                     p = grid[x, y] * grid[x + 1, y] * grid[x + 2, y] * grid[x + 3, y];
                     r = p > r ? p : r;
