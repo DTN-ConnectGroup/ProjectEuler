@@ -24,6 +24,18 @@ let private IsPrimeAux =
     Memoize naive
 
 let IsPrime n = IsPrimeAux n
+
+let PrimesSeq = 
+    let rec loop iter cache = 
+        seq { 
+            if Set.exists (fun p -> iter % p = 0) cache then 
+                yield! loop (iter + 1) cache
+            else 
+                yield iter
+                yield! loop (iter + 1) (Set.add iter cache)
+        }
+    loop 2 Set.empty
+
 let IsPalindrome str = str = new string(Array.rev (str.ToCharArray()))
 
 let private DivisorsAux = 

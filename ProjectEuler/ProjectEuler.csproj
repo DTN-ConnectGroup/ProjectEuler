@@ -83,7 +83,10 @@
     <Compile Include="30-39\Problem35.cs" />
     <Compile Include="30-39\Problem36.cs" />
     <Compile Include="30-39\Problem37.cs" />
+    <Compile Include="Problem44.cs" />
+    <Compile Include="Problem45.cs" />
     <Compile Include="Problem40.cs" />
+    <Compile Include="Problem48.cs" />
     <Compile Include="Problem67.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
